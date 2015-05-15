@@ -84,14 +84,15 @@ public class FloatingActionsMenu extends ViewGroup {
   }
 
   private void init(Context context, AttributeSet attributeSet) {
-    mButtonSpacing = (int) (getResources().getDimension(R.dimen.fab_actions_spacing) - getResources().getDimension(R.dimen.fab_shadow_radius) - getResources().getDimension(R.dimen.fab_shadow_offset));
+    TypedArray attr = context.obtainStyledAttributes(attributeSet, R.styleable.FloatingActionsMenu, 0, 0);
+    float spacing = attr.getDimension(R.styleable.FloatingActionsMenu_fab_actions_spacing, getResources().getDimension(R.dimen.fab_actions_spacing));
+    mButtonSpacing = (int) (spacing - getResources().getDimension(R.dimen.fab_shadow_radius) - getResources().getDimension(R.dimen.fab_shadow_offset));
     mLabelsMargin = getResources().getDimensionPixelSize(R.dimen.fab_labels_margin);
     mLabelsVerticalOffset = getResources().getDimensionPixelSize(R.dimen.fab_shadow_offset);
 
     mTouchDelegateGroup = new TouchDelegateGroup(this);
     setTouchDelegate(mTouchDelegateGroup);
 
-    TypedArray attr = context.obtainStyledAttributes(attributeSet, R.styleable.FloatingActionsMenu, 0, 0);
     mAddButtonPlusColor = attr.getColor(R.styleable.FloatingActionsMenu_fab_addButtonPlusIconColor, getColor(android.R.color.white));
     mAddButtonColorNormal = attr.getColor(R.styleable.FloatingActionsMenu_fab_addButtonColorNormal, getColor(R.color.default_normal));
     mAddButtonColorPressed = attr.getColor(R.styleable.FloatingActionsMenu_fab_addButtonColorPressed, getColor(R.color.default_pressed));
