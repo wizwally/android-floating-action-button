@@ -56,7 +56,7 @@ Unlike some other FloatingActionButton libraries this library doesn't implement 
 
 Credits
 =======
-This library is a supported backwards-compatible version of the [FloatingActionButton](https://github.com/futuresimple/FloatingActionButton) library by [Jerzy Chalupski](https://github.com/chalup).
+This library is a supported backwards-compatible version of the [FloatingActionButton](https://github.com/futuresimple/android-floating-action-button) library by [Jerzy Chalupski](https://github.com/chalup).
 
 That library used [FloatingActionButton](https://github.com/makovkastar/FloatingActionButton) library by [Oleksandr Melnykov](https://github.com/makovkastar) as a base for development.
 
